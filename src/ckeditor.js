@@ -22,6 +22,7 @@ import Underline from '@ckeditor/ckeditor5-basic-styles/src/underline.js';
 import WordCount from '@ckeditor/ckeditor5-word-count/src/wordcount.js';
 import fontSize from '@ckeditor/ckeditor5-font/src/fontsize.js';
 import blockQuote from '@ckeditor/ckeditor5-block-quote/src/blockquote.js';
+import PasteFromOffice from '@ckeditor/ckeditor5-paste-from-office/src/pastefromoffice.js';
 
 class Editor extends ClassicEditor {}
 
@@ -45,7 +46,8 @@ Editor.builtinPlugins = [
 	Underline,
 	WordCount,
 	fontSize,
-	blockQuote
+	blockQuote,
+	PasteFromOffice
 ];
 
 // Editor configuration.
