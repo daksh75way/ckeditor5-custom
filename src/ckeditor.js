@@ -19,6 +19,7 @@ import WordCount from '@ckeditor/ckeditor5-word-count/src/wordcount.js';
 import fontSize from '@ckeditor/ckeditor5-font/src/fontsize.js';
 import blockQuote from '@ckeditor/ckeditor5-block-quote/src/blockquote.js';
 import PasteFromOffice from '@ckeditor/ckeditor5-paste-from-office/src/pastefromoffice';
+import BalloonToolbar from '@ckeditor/ckeditor5-ui/src/toolbar/balloon/balloontoolbar';
 
 class Editor extends ClassicEditor {}
 
@@ -43,7 +44,8 @@ Editor.builtinPlugins = [
 	WordCount,
 	fontSize,
 	blockQuote,
-	PasteFromOffice
+	PasteFromOffice,
+	BalloonToolbar
 ];
 
 // Editor configuration.
@@ -82,7 +84,30 @@ Editor.defaultConfig = {
 	pasteFromOffice: {
 		keepInlineStyles: true,
 		allowWordPaste: true
-	}
+	},
+	balloonToolbar: {
+		items: [
+			'heading',
+			'|',
+			'fontSize',
+			'|',
+			'bold',
+			'italic',
+			'underline',
+			'strikethrough',
+			'link',
+			'|',
+			'bulletedList',
+			'numberedList',
+			"blockQuote",
+			'|',
+			'imageUpload',
+			'insertTable',
+			'|',
+			'undo',
+			'redo'
+		]
+	},
 };
 
 export default Editor;
