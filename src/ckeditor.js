@@ -20,6 +20,8 @@ import fontSize from '@ckeditor/ckeditor5-font/src/fontsize.js';
 import blockQuote from '@ckeditor/ckeditor5-block-quote/src/blockquote.js';
 import PasteFromOffice from '@ckeditor/ckeditor5-paste-from-office/src/pastefromoffice';
 import BalloonToolbar from '@ckeditor/ckeditor5-ui/src/toolbar/balloon/balloontoolbar';
+import ImageToolbar from '@ckeditor/ckeditor5-image/src/imagetoolbar.js';
+import ImageTextAlternative from '@ckeditor/ckeditor5-image/src/imagetextalternative.js';
 
 class Editor extends ClassicEditor {}
 
@@ -45,7 +47,9 @@ Editor.builtinPlugins = [
 	fontSize,
 	blockQuote,
 	PasteFromOffice,
-	BalloonToolbar
+	BalloonToolbar,
+	ImageToolbar,
+	ImageTextAlternative
 ];
 
 // Editor configuration.
@@ -106,6 +110,17 @@ Editor.defaultConfig = {
 			'|',
 			'undo',
 			'redo'
+		]
+	},
+	image: {
+		toolbar: [
+			'imageStyle:block',
+			'imageStyle:side',
+			'|',
+			'toggleImageCaption',
+			'imageTextAlternative',
+			'|',
+			'linkImage'
 		]
 	},
 };
