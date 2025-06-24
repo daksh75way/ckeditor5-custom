@@ -22,6 +22,7 @@ import PasteFromOffice from '@ckeditor/ckeditor5-paste-from-office/src/pastefrom
 import BalloonToolbar from '@ckeditor/ckeditor5-ui/src/toolbar/balloon/balloontoolbar';
 import ImageToolbar from '@ckeditor/ckeditor5-image/src/imagetoolbar.js';
 import ImageTextAlternative from '@ckeditor/ckeditor5-image/src/imagetextalternative.js';
+import ImageCaption from '@ckeditor/ckeditor5-image/src/imagecaption.js';
 
 class Editor extends ClassicEditor {}
 
@@ -49,7 +50,8 @@ Editor.builtinPlugins = [
 	PasteFromOffice,
 	BalloonToolbar,
 	ImageToolbar,
-	ImageTextAlternative
+	ImageTextAlternative,
+	ImageCaption
 ];
 
 // Editor configuration.
