@@ -23,6 +23,7 @@ import BalloonToolbar from '@ckeditor/ckeditor5-ui/src/toolbar/balloon/balloonto
 import ImageToolbar from '@ckeditor/ckeditor5-image/src/imagetoolbar.js';
 import ImageTextAlternative from '@ckeditor/ckeditor5-image/src/imagetextalternative.js';
 import ImageCaption from '@ckeditor/ckeditor5-image/src/imagecaption.js';
+import ImageResize from '@ckeditor/ckeditor5-image/src/imageresize';
 
 class Editor extends ClassicEditor {}
 
@@ -51,7 +52,8 @@ Editor.builtinPlugins = [
 	BalloonToolbar,
 	ImageToolbar,
 	ImageTextAlternative,
-	ImageCaption
+	ImageCaption,
+	ImageResize
 ];
 
 // Editor configuration.
